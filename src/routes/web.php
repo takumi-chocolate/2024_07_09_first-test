@@ -17,7 +17,8 @@ use App\Http\Controllers\RegisteredUserController;
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::get('/register', [RegisteredUserController::class, 'index']);*/
-Route::post('/register', [RegisteredUserController::class, 'store']);
-Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::get('/register', [RegisteredUserController::class, 'index']);
+/*Route::get('/register', [RegisteredUserController::class, 'create']);*/
+/*Route::post('/register', [RegisteredUserController::class, 'store']);*/
+
 /*login画面を表示したい*/

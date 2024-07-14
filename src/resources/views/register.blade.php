@@ -13,31 +13,31 @@
     </div>
     <div class="register__form">
         <div class="register__form--name">
-            <form action="/register"  method="post">
+            <form action=""  method="post">
                 @csrf
-                <input type="text" name="name" placeholder="名前">
+                <input type="text" name="name" value="{{ old('name') }}" placeholder="名前">
             </form>
         </div>
         <div class="register__form--email">
-            <form action="/register"  method="post">
+            <form action=""  method="post">
                 @csrf
-                <input type="email" name="email" placeholder="メールアドレス">
+                <input type="email" name="email" value="{{ old('email') }}" placeholder="メールアドレス">
             </form>
         </div>
         <div class="register__form--password">
-            <form action="/register"  method="post">
+            <form action=""  method="post">
                 @csrf
-                <input type="password" name="password" placeholder="パスワード">
+                <input type="password" name="password" value="{{ old('password') }}" placeholder="パスワード">
             </form>
         </div>
         <div class="register__form--true-password">
-            <form action="/register"  method="post">
+            <form action=""  method="post">
                 @csrf
-                <input type="password" name="true password" placeholder="確認用パスワード">
+                <input type="password" name="true password" value="{{ old('true password' )}}" placeholder="確認用パスワード">
             </form>
         </div>
         <div class="register__form--button">
-            <form action="/register" method="post">
+            <form action="" method="post">
                 @csrf
                 <button>会員登録</button>
             </form>
