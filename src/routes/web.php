@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/register', [RegisteredUserController::class, 'index']);
-/*Route::get('/register', [RegisteredUserController::class, 'create']);*/
-/*Route::post('/register', [RegisteredUserController::class, 'store']);*/
+Route::post('/register', [RegisteredUserController::class, 'create']);
+Route::get('/login', [AuthenticatedSessionController::class, 'index']);
+/*リレーションの確認する*/
 
 /*login画面を表示したい*/

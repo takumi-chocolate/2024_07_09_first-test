@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\RegisterRequest;
+use Illuminate\Auth\Events\Registered;
 
 class RegisteredUserController extends Controller
 {
@@ -14,13 +15,13 @@ class RegisteredUserController extends Controller
     }
     
 
-    public function create(Request $request) {
-        /*$form = $request->all();
+    public function create(RegisterRequest $request) {
+        $form = $request->all();
         User::create($form);
-        return view('/register');*/
+        return redirect('/');
     }
     /*bladefileのformタグに対応するようにコーディングする*/
-    /*indexとcreateとstoreの違いを確認googleで調べる*/
+    /*エラー$fillable　バリデーションを学びなおす　→　今まで詰まっていたエラーが解決できるかもしれない*/
 
 
     /*public function store(RegisterUserRequest $request) {
